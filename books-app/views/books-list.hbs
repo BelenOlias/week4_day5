@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>Los libros de {{siteTitle}}</h1>
+
+    <ul>
+        {{#each books}}
+        <li>
+            <p>{{title}} |
+                <a class="btn btn-sm btn-dark" href="/libros/detalles/{{_id}}">ver detalles</a>
+                <a class="btn btn-sm btn-dark" href="/libros/editar?book_id={{_id}}">editar</a>
+            </p>
+        </li>
+        {{/each}}
+    </ul>
+</div>

@@ -1,0 +1,22 @@
+<div class="container">
+    <h1>Detalles de {{title}}</h1>
+    <hr>
+
+    <div class="row">
+        <div class="col-md-6">
+            <p>Descripción: {{description}}</p>
+        </div>
+        <div class="col-md-6">
+            <p>Autor/a:</p>
+            <!-- {{author}} es un array de objetos con toda la información de cada autor gracias a la populación del controlador -->
+            {{#each author}}
+            <img src="{{pictureUrl}}" alt="" style="width: 100%">
+            <p>Nombre: {{name}} {{lastName}} ({{nationality}})</p>
+            {{/each}}
+            <hr>
+            <p>Puntuación: {{rating}}</p>
+        </div>
+    </div>
+    <a class="btn btn-dark" href="/libros/listado">Volver a los libros</a>
+
+</div>
